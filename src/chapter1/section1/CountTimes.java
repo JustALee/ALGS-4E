@@ -9,6 +9,7 @@ public class CountTimes {
         int m = 10;
         StdOut.print(Arrays.toString(histogram(a, m)));
     }
+
     public static int[] histogram(int[] a, int M) {
         int[] b = new int[M];
         for (int num: a) {
