@@ -1,0 +1,5 @@
+# Compiled java files
+*.class
+
+# Data files
+src/algs4-data/
