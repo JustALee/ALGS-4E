@@ -1,5 +1,5 @@
-# Compiled java files
-*.class
+# IntelliJ
+out/
 
 # Data files
 algs4-data
