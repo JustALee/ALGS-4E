@@ -9,7 +9,8 @@ public class TestEqual {
         int num3 = Integer.parseInt(args[2]);
         if (num1 == num2 && num2 == num3) {
             StdOut.print("equal");
+        } else {
+            StdOut.print("not equal");
         }
-        else StdOut.print("not equal");
     }
 }
