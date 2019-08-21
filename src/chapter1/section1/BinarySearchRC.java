@@ -17,7 +17,7 @@ public class BinarySearchRC {
                 StdOut.printf("Hit: %s.\n\n", key);
             }
             else {
-                StdOut.printf("No hit.\n\n");
+                StdOut.print("No hit.\n\n");
             }
         }
     }
