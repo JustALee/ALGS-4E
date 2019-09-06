@@ -11,6 +11,13 @@ public class Transaction {
         this.amount = amount;
     }
 
+    public Transaction(String transaction) {
+        String[] fields = transaction.split("\\s+");
+        who = fields[0];
+        when = new Date(fields[1]);
+        amount = Double.parseDouble(fields[2]);
+    }
+
     public String who() {
         return who;
     }
