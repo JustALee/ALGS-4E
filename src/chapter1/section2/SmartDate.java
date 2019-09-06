@@ -3,6 +3,8 @@ package chapter1.section2;
 import edu.princeton.cs.algs4.StdIn;
 import edu.princeton.cs.algs4.StdOut;
 
+import java.util.Calendar;
+
 public class SmartDate {
     private final int month;
     private final int day;
@@ -69,6 +71,31 @@ public class SmartDate {
         return year;
     }
 
+    public String dayOfTheWeek() {
+        Calendar c = Calendar.getInstance();
+        // Month value is 0-based, so it has to -1 to set date correctly
+        c.set(year, month - 1, day);
+        int dow = c.get(Calendar.DAY_OF_WEEK);
+        switch (dow) {
+            case 1:
+                return "Sunday";
+            case 2:
+                return "Monday";
+            case 3:
+                return "Tuesday";
+            case 4:
+                return "Wednesday";
+            case 5:
+                return "Thursday";
+            case 6:
+                return "Friday";
+            case 7:
+                return "Saturday";
+            default:
+                return null;
+        }
+    }
+
     public String toString() {
         return month() + "/" + day() + "/" + year();
     }
@@ -89,6 +116,6 @@ public class SmartDate {
         int d = StdIn.readInt();
         int y = StdIn.readInt();
         SmartDate date = new SmartDate(m, d, y);
-        StdOut.println(date);
+        StdOut.printf("%s is %s\n", date, date.dayOfTheWeek());
     }
 }
