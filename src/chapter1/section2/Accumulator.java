@@ -5,16 +5,26 @@ import edu.princeton.cs.algs4.StdOut;
 import edu.princeton.cs.algs4.StdRandom;
 
 public class Accumulator {
+    private double m;
+    private double s;
     private int N;
-    private double total;
 
-    public void addDataValue(double val) {
+    public void addDataValue(double x) {
         N++;
-        total += val;
+        s = s + 1.0 * (N-1) / N * (x-m) * (x-m);
+        m = m + (x-m) / N;
     }
 
     public double mean() {
-        return total/N;
+        return m;
+    }
+
+    public double var() {
+        return s / (N-1);
+    }
+
+    public double stddev() {
+        return Math.sqrt(this.var());
     }
 
     public String toString() {
