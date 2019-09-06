@@ -26,4 +26,15 @@ public class Transaction {
     public String toString() {
         return who() + " made a $" + amount() + " transaction on " + when();
     }
+
+    public boolean equals(Object x) {
+        if (this == x) return true;
+        if (x == null) return false;
+        if (this.getClass() != x.getClass()) return false;
+        Transaction that = (Transaction) x;
+        if (!this.who.equals(that.who)) return false;
+        if (this.when != that.when) return false;
+        if (this.amount != that.amount) return false;
+        return true;
+    }
 }
