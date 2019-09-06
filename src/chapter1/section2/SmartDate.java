@@ -9,11 +9,8 @@ public class SmartDate {
     private final int year;
 
     public SmartDate(int m, int d, int y) {
-        if (m >= 1 && m <= 12) {
-            month = m;
-        } else {
-            throw new IllegalArgumentException("Month value should be between 1 and 12");
-        }
+        /* Validate if the given days is legal,
+        in the meanwhile, it could validate the given month , too  */
         switch (m) {
             case 1:
             case 3:
@@ -54,8 +51,9 @@ public class SmartDate {
                 }
                 break;
             default:
-                throw new IllegalArgumentException("Illegal day value");
+                throw new IllegalArgumentException("Month value should be between 1 and 12");
         }
+        month = m;
         year = y;
     }
 
