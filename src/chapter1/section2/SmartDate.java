@@ -10,7 +10,7 @@ public class SmartDate {
 
     public SmartDate(int m, int d, int y) {
         /* Validate if the given days is legal,
-        in the meanwhile, it could validate the given month , too  */
+        in the meanwhile, it could validate the given month, too  */
         switch (m) {
             case 1:
             case 3:
