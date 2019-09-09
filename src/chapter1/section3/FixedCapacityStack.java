@@ -33,7 +33,11 @@ public class FixedCapacityStack<Item> {
     }
 
     public Item pop() {
-        return a[--N];
+        Item item = a[--N];
+        a[N] = null;
+        if (N > 0 && N == a.length/4)
+            resize(a.length/2);
+        return item;
     }
 
     public static void main(String[] args) {
