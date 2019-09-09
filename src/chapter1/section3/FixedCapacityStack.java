@@ -26,6 +26,9 @@ public class FixedCapacityStack<Item> {
     }
 
     public void push(Item item) {
+        if (N == a.length) {
+            resize(2*a.length);
+        }
         a[N++] = item;
     }
 
