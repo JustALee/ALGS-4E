@@ -19,6 +19,12 @@ public class FixedCapacityStack<Item> {
         return N;
     }
 
+    public void resize(int max) {
+        Item[] temp = (Item[]) new Object[max];
+        System.arraycopy(a, 0, temp, 0, a.length);
+        a = temp;
+    }
+
     public void push(Item item) {
         a[N++] = item;
     }
