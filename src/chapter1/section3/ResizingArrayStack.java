@@ -1,11 +1,8 @@
 package chapter1.section3;
 
-import edu.princeton.cs.algs4.StdIn;
-import edu.princeton.cs.algs4.StdOut;
-
 import java.util.Iterator;
 
-public class ResizingArrayStack<Item> {
+public class ResizingArrayStack<Item> implements Iterable<Item> {
     private Item[] a = (Item[]) new Object[1];
     private int N = 0;
 

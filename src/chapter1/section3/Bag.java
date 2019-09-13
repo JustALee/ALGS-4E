@@ -2,7 +2,7 @@ package chapter1.section3;
 
 import java.util.Iterator;
 
-public class Bag<Item> {
+public class Bag<Item> implements Iterable<Item> {
     private Node first;
     private int N;
 
