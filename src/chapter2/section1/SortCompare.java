@@ -1,5 +1,6 @@
 package chapter2.section1;
 
+import chapter2.section2.Merge;
 import edu.princeton.cs.algs4.StdOut;
 import edu.princeton.cs.algs4.StdRandom;
 import edu.princeton.cs.algs4.Stopwatch;
