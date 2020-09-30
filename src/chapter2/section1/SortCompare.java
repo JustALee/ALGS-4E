@@ -1,6 +1,7 @@
 package chapter2.section1;
 
 import chapter2.section2.Merge;
+import chapter2.section3.Quick;
 import edu.princeton.cs.algs4.StdOut;
 import edu.princeton.cs.algs4.StdRandom;
 import edu.princeton.cs.algs4.Stopwatch;
@@ -12,8 +13,8 @@ public class SortCompare {
         if (alg.equals("Selection")) Selection.sort(a);
         if (alg.equals("Shell")) Shell.sort(a);
         if (alg.equals("Merge")) Merge.sort(a);
-        /*if (alg.equals("Quick")) Quick.sort(a);
-        if (alg.equals("Heap")) Heap.sort(a);*/
+        if (alg.equals("Quick")) Quick.sort(a);
+        /*if (alg.equals("Heap")) Heap.sort(a);*/
         return timer.elapsedTime();
     }
 
